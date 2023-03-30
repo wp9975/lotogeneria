@@ -18,7 +18,7 @@ const EuroJackpotOptions = ({ onGenerateNumbers }) => {
   const [numSets, setNumSets] = useState(1);
   const [uniqueNumbers, setUniqueNumbers] = useState(false);
   const [mainNumberRange, setMainNumberRange] = useState([1, 50]);
-  const [euroNumberRange, setEuroNumberRange] = useState([1, 10]);
+  const [euroNumberRange, setEuroNumberRange] = useState([1, 12]);
   const [requiredMainNumbers, setRequiredMainNumbers] = useState([]);
   const [requiredEuroNumbers, setRequiredEuroNumbers] = useState([]);
   const [excludedMainNumbers, setExcludedMainNumbers] = useState([]);
@@ -85,7 +85,7 @@ const EuroJackpotOptions = ({ onGenerateNumbers }) => {
       (n) => !isNaN(n) && n >= 1 && n <= 50
     );
     const validEuroNumbers = numbers.filter(
-      (n) => !isNaN(n) && n >= 1 && n <= 10
+      (n) => !isNaN(n) && n >= 1 && n <= 12
     );
     return { validMainNumbers, validEuroNumbers };
   };
@@ -135,7 +135,7 @@ const EuroJackpotOptions = ({ onGenerateNumbers }) => {
             onChange={(e, newValue) => setEuroNumberRange(newValue)}
             valueLabelDisplay="auto"
             min={1}
-            max={10}
+            max={12}
             aria-labelledby="euro-range-slider"
           />
         </div>
@@ -232,7 +232,7 @@ const EuroJackpotOptions = ({ onGenerateNumbers }) => {
           setRequiredNumbers={setRequiredEuroNumbers}
           numColumns={5}
           minNumber={1}
-          maxNumber={10}
+          maxNumber={12}
         />
       </div>
     </Fragment>

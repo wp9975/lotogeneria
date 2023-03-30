@@ -2,3 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+    .video-filter {
+      filter:  brightness(0.5) contrast(1.5) saturate(1.5) sepia(0.5) hue-rotate(180deg) ;
+    }
+  }

@@ -7,7 +7,7 @@ const MiniLotto = () => {
   const [generatedSets, setGeneratedSets] = useState([]);
 
   return (
-    <div className="container px-4 py-8 mx-auto">
+    <div className="flex flex-col items-center min-h-screen pt-24 bg-slate-100">
       <h1 className="mb-8 text-4xl font-bold">Mini Lotto</h1>
       <MiniLottoSets generatedSets={generatedSets} />
       <MiniLottoOptions onGenerateNumbers={setGeneratedSets} />

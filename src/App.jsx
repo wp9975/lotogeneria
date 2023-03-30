@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Lotto from './pages/LottoPage';
 import EuroJackpot from './pages/EuroJackpot';
 import MiniLotto from './pages/MiniLotto';
+import Footer from './components/global/Footer';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/eurojackpot" element={<EuroJackpot />} />
         <Route path="/minilotto" element={<MiniLotto />} />
       </Routes>
+      <Footer/>
     </BrowserRouter>
   );
 };

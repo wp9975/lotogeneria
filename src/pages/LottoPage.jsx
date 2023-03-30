@@ -11,7 +11,7 @@ const LottoPage = () => {
     setGeneratedSets(newSets);
   };
   return (
-    <div className="flex flex-col items-center h-screen pt-24 ">
+    <div className="flex flex-col items-center h-screen pt-24 bg-slate-100 ">
       <LottoSets generatedSets={generatedSets} />
       <LottoOptions onGenerateNumbers={handleGenerateNumbers}/>
     
