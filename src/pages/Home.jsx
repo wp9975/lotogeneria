@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
 const Home = () => {
-  return (
-    <div>Home</div>
-  )
-}
+  return <div className="h-screen flex flex-col justify-center items-center bg-slate-500">
+    
+  </div>;
+};
 
-export default Home
+export default Home;

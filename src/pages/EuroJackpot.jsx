@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { useState } from "react";
+import EuroJackpotOptions from "../components/EuroJackpot/EuroJackpotOptions";
+import EuroJackpotResults from "../components/EuroJackpot/EuroJackpotResults";
 
 const EuroJackpot = () => {
-  return (
-    <div>EuroJackpot</div>
-  )
-}
+  const [generatedNumbers, setGeneratedNumbers] = useState([]);
 
-export default EuroJackpot
+  return (
+    <div className="pt-24 euro-jackpot-page">
+      <h1 className="mb-8 text-4xl text-center">EuroJackpot Generator</h1>
+      <EuroJackpotResults  generatedSets={generatedNumbers}/>
+      <EuroJackpotOptions onGenerateNumbers={setGeneratedNumbers} />
+    </div>
+  );
+};
+
+export default EuroJackpot;

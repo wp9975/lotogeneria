@@ -1,9 +1,19 @@
-import React from 'react'
+import React, { useState } from "react";
+import MiniLottoOptions from "../components/MiniLotto/MiniLottoOptions";
+import MiniLottoSets from "../components/MiniLotto/MiniLottoSets";
+
 
 const MiniLotto = () => {
-  return (
-    <div>MiniLotto</div>
-  )
-}
+  const [generatedSets, setGeneratedSets] = useState([]);
 
-export default MiniLotto
+  return (
+    <div className="container px-4 py-8 mx-auto">
+      <h1 className="mb-8 text-4xl font-bold">Mini Lotto</h1>
+      <MiniLottoSets generatedSets={generatedSets} />
+      <MiniLottoOptions onGenerateNumbers={setGeneratedSets} />
+      
+    </div>
+  );
+};
+
+export default MiniLotto;
