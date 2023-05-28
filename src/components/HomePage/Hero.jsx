@@ -4,12 +4,12 @@ import lottoVideo from "../../assets/video/loteria.mp4";
 
 const Hero = () => {
   return (
-    <div className="relative w-full h-screen">
+    <div className="relative w-full h-screen overflow-y-hidden">
       <video
         autoPlay
         loop
         muted
-        className="absolute inset-0 z-0 object-cover w-full h-screen video-filter"
+        className="absolute inset-0 z-0 object-cover w-full h-full video-filter"
       >
         <source src={lottoVideo} type="video/mp4" />
       </video>

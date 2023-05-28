@@ -6,6 +6,7 @@ import Lotto from './pages/LottoPage';
 import EuroJackpot from './pages/EuroJackpot';
 import MiniLotto from './pages/MiniLotto';
 import Footer from './components/global/Footer';
+import ScrollToTopButton from './components/global/ScrollToTopButton';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/eurojackpot" element={<EuroJackpot />} />
         <Route path="/minilotto" element={<MiniLotto />} />
       </Routes>
+      <ScrollToTopButton/>
       <Footer/>
     </BrowserRouter>
   );
